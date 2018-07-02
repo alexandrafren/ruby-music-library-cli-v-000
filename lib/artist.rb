@@ -3,8 +3,6 @@ class Artist
   @@all = []
   #adds find_by_name and find_or_create_by_name options
   extend Concerns::Findable
-  extend Concerns::Persistable::ClassMethods
-  include Concerns::Persistable::InstanceMethods
 
   def initialize(name)
     @name = name
@@ -15,13 +13,13 @@ class Artist
     @@all
   end
 
-#  def self.destroy_all
-  #  @@all.clear
-  #end
+ def self.destroy_all
+    @@all.clear
+ end
 
-  #def save
-  #  @@all << self
-#  end
+  def save
+    @@all << self
+  end
 
   def self.create(name)
     artist = Artist.new(name)
