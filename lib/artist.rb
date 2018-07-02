@@ -3,8 +3,8 @@ class Artist
   @@all = []
   #adds find_by_name and find_or_create_by_name options
   extend Concerns::Findable
-  extend Persistable::ClassMethods
-  include Persistable::InstanceMethods
+  extend Concerns::Persistable::ClassMethods
+  include Concerns::Persistable::InstanceMethods
 
   def initialize(name)
     @name = name
