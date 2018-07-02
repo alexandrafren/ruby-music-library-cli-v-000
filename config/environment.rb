@@ -4,7 +4,5 @@ Bundler.require
 module Concerns
 end
 
-module Persistable
-end
 
 require_all 'lib'
