@@ -3,15 +3,16 @@ class Artist
   @@all = []
   #adds find_by_name and find_or_create_by_name options
   extend Concerns::Findable
+  extend Concerns::MethodsAll
 
   def initialize(name)
     @name = name
     @songs = []
   end
 
-  def self.all
-    @@all
-  end
+  #def self.all
+  #  @@all
+  #end
 
   def self.destroy_all
     @@all.clear

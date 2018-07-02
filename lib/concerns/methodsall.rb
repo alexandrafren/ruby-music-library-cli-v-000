@@ -1,7 +1,7 @@
 module Concerns::MethodsAll
 
-  def all 
-    @@all 
+  def all
+    @@all
   end
-  
+
 end
